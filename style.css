@@ -14,20 +14,30 @@ body {
     background: linear-gradient(white, black);
 }
 
+.descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .descricao > h1 {
     width: 50%;
-    margin: 5% 20% 1% 20%;
-    display: flex;
+    margin: 50px 0 5px 0;
 }
 
 .descricao > p {
     width: 50%;
-    margin: 0% 20% 10%;
+}
+
+.descricao > img {
+    width: 20%;
+    margin-bottom: 50px;
 }
 
 .mb-4 > a > img {
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
 }
 
 footer img:hover {
@@ -71,10 +81,22 @@ footer img:hover {
 
 input {
     border-radius: 5px;
+    border: none;
 }
 
 #btn {
     width: 20%;
     margin-top: 20px;
+    border-radius: 10px;
+    background: rgba(82, 82, 82, 0.849);
+    transition: 2s;
+    color: white;
+    border: none;
 }
 
+#btn:hover {
+    background-color: black;
+    transition: 2s;
+    border: none;
+
+}
