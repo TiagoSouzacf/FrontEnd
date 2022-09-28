@@ -45,7 +45,21 @@ document.getElementById('cep')
 
 document.getElementById("cadastrar").onclick = cadastrar;
 
+
 async function cadastrar ()  {
+
+    var main = document.getElementById("load");
+
+       main.innerHTML += `
+        <div class="load">
+            <div class="clearfix">
+            <div class="spinner-border float-end" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            </div>
+        </div>
+        `;
+
     var nome = document.getElementById("inputNome").value;
     var cpf = document.getElementById("inputCpf").value;
     var email = document.getElementById("inputEmail").value;
@@ -72,7 +86,6 @@ let data =  {
     "status": "Em análise",
    };
 
-
    fetch("https://6333633c433198e79dc444a9.mockapi.io/cadastro", {
      method: "POST",
      headers: {
@@ -83,8 +96,12 @@ let data =  {
      .then((response) => response.json())
      .then((data) => {
        console.log("Success:", data);
+       main.remove(); 
+       alert("Cadastro realizado com sucesso :)");
      })
      .catch((error) => {
-       console.error("Error:", error);
+        alert("Erro ao cadastrar usuário :(");
      });
-}
+
+    }
+    
