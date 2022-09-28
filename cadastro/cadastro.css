@@ -14,13 +14,6 @@ body {
     background: linear-gradient(white, black);
 }
 
-#position{
-    position: fixed;
-    z-index: 1000;
-    width: 100vw;
-    height: 8vh;
-}
-
 .wpp-link{
     position: fixed;
     width: 60px;
