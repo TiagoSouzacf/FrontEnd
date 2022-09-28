@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Serra Nuvem { ... }</title>
+    <title>Serra Bank { ... }</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Serra Nuvem { ... }</a>
+            <a class="navbar-brand" href="#">Serra Bank { ... }</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -39,8 +39,33 @@
         </div>
     </nav>
 
-    <main>
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatum laudantium corrupti in! Possimus laboriosam, quam nostrum, doloremque unde ullam nam error necessitatibus reprehenderit, nemo magnam natus provident cumque dolores.</h1>
+    <main class="cadastro">
+        <h1 class="title">Consulta</h1>
+        <form class="row g-3">
+            <div class="col-md-2">
+                <label for="inputCpf" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="inputCpf" placeholder="XXX.XXX.XXX-XX" required>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-dark" id="consultar">Consultar</button>
+            </div>
+            <div class="col-md-10">
+              <label for="inputNome" class="form-label">Nome Completo</label>
+              <input type="text" class="form-control" id="inputNome" disabled>
+            </div>
+            <div class="col-2">
+                <label for="inputTelefone" class="form-label">Telefone</label>
+                <input type="tel" class="form-control" id="inputTelefone" disabled>
+              </div>
+            <div class="col-8">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail" disabled>
+            </div>
+            <div class="col-md-4">
+                <label for="inputStatus" class="form-label">Status</label>
+                <input type="text" class="form-control" id="inputStatus" disabled>
+            </div>
+          </form>
     </main>
 
     <footer class="text-center text-white" style="background-color: #f1f1f1;">
@@ -86,6 +111,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
     </script>
+    <script src="./consulta.js"></script>
 </body>
 
 </html>

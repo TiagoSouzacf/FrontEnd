@@ -22,7 +22,6 @@ const cepValido = (cep) => cep.length == 8 && eNumero(cep);
 
 const pesquisarCep = async() => {
     limparFormulario();
-    
     const cep = document.getElementById('cep').value;
     const url = `https://viacep.com.br/ws/${cep}/json/`;
     if (cepValido(cep)){
@@ -40,15 +39,13 @@ const pesquisarCep = async() => {
 }
 
 document.getElementById('cep')
-        .addEventListener('focusout',pesquisarCep);
+        .addEventListener('focusout', pesquisarCep);
 
-
-
-function enviar(evento) {
-    console.log("teste");
-    const url = "https://6333633c433198e79dc444a9.mockapi.io/cadastro"
-    evento.preventDefault() 
-    var dados = new FormData (evento.currentTarget);
-    dados.get("nome");
-    console.log(dados.get("nome"));
-}
+// function enviar(evento) {
+//     console.log("teste");
+//     const url = "https://6333633c433198e79dc444a9.mockapi.io/cadastro"
+//     evento.preventDefault() 
+//     var dados = new FormData (evento.currentTarget);
+//     dados.get("nome");
+//     console.log(dados.get("nome"));
+// }
