@@ -41,11 +41,50 @@ const pesquisarCep = async() => {
 document.getElementById('cep')
         .addEventListener('focusout', pesquisarCep);
 
-// function enviar(evento) {
-//     console.log("teste");
-//     const url = "https://6333633c433198e79dc444a9.mockapi.io/cadastro"
-//     evento.preventDefault() 
-//     var dados = new FormData (evento.currentTarget);
-//     dados.get("nome");
-//     console.log(dados.get("nome"));
-// }
+
+
+document.getElementById("cadastrar").onclick = cadastrar;
+
+async function cadastrar ()  {
+    var nome = document.getElementById("inputNome").value;
+    var cpf = document.getElementById("inputCpf").value;
+    var email = document.getElementById("inputEmail").value;
+    var telefone = document.getElementById("inputTelefone").value;
+    var cep = document.getElementById("cep").value;
+    var endereco = document.getElementById("endereco").value;
+    var numero = document.getElementById("numero").value;
+    var bairro = document.getElementById("bairro").value;
+    var cidade = document.getElementById("cidade").value;
+    var estado = document.getElementById("estado").value;
+
+
+let data =  {
+    "nome": nome,
+    "cpf": "123456",
+    "email": email,
+    "telefone": telefone,
+    "cep": cep,
+    "endereco": endereco,
+    "numeroendereco": numero,
+    "bairro": bairro,
+    "cidade": cidade,
+    "uf": estado,
+    "status": "Em análise",
+   };
+
+
+   fetch("https://6333633c433198e79dc444a9.mockapi.io/cadastro", {
+     method: "POST",
+     headers: {
+       "Content-Type": "application/json",
+     },
+     body: JSON.stringify(data),
+   })
+     .then((response) => response.json())
+     .then((data) => {
+       console.log("Success:", data);
+     })
+     .catch((error) => {
+       console.error("Error:", error);
+     });
+}
