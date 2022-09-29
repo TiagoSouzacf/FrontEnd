@@ -13,6 +13,11 @@
 </head>
 
 <body>
+    <!-- MODAL -->
+    <script type="text/javascript" src="pop-up/js/bioep.min.js"></script>
+    <script type="text/javascript" src="pop-up/js/editar.js"></script>
+    <!-- MODAL -->
+
     <nav id="position" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">Serra Bank</a>
@@ -82,58 +87,27 @@
             <p>Use o Pix para fazer pagamentos e transferências instantâneas a qualquer hora. Sem burocracia e sem
                 custo.</p>
             <img src="./img/inter.png" alt="">
+
+            <h2>PLANOS E PREÇOS</h2>
+                <div class="h3">
+                    <h3>Confira as vantagens de ser Serra Bank!</h3>
+                    <h3>Comece a usar agora mesmo.</h3>
+                </div>
         </div>
+
 
         <div class="row row-cols-1 row-cols-md-3 mb-3 border-dark" id="precos">
             <div class="col">
                 <div class="card mb-3 rounded-3 shadow-sm border-dark">
-                    <div class="card-header py-3  text-bg-dark border-dark">
-                        <h4 class="my-0 fw-normal">Bronze</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title text-dark">$0<small
-                                class="text-muted fw-light">/m</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4 text-black">
-                            <li>Suporte gratuito</li>
-                            <li>Segurança digital</li>
-                            <li>Acesso ilimitado</li>
-                        </ul>
-                        <a href="./cadastro/cadastro.html">
-                            <button type="button" class="w-100 btn btn-lg btn-dark">Contratar</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm border-dark">
-                    <div class="card-header py-3 text-bg-dark border-dark">
-                        <h4 class="my-0 fw-normal">Prata</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title text-dark">$25<small
-                                class="text-muted fw-light">/m</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4  text-black">
-                            <li>Suporte gratuito</li>
-                            <li>Segurança digital</li>
-                            <li>Acesso ilimitado</li>
-                            <li>Emissão de boletos</li>
-                            <li>3 Usuários</li>
-                        </ul>
-                        <a href="./cadastro/cadastro.html">
-                            <button type="button" class="w-100 btn btn-lg btn-dark">Contratar</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm border-dark">
-                    <div class="card-header py-3 text-bg-dark border-dark">
-                        <h4 class="my-0 fw-normal">Ouro</h4>
+                    <div id="rank" class="card-header py-3  text-bg-dark border-dark">
+                        <h4 class="my-0 fw-normal"> Ouro </h4>
+                        <h4> <img src="./img/ouro.png" alt="" width="25px"></h4>
+
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title text-dark">$50<small
                                 class="text-muted fw-light">/m</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4  text-black">
+                        <ul class="list-unstyled mt-3 mb-4 text-black">
                             <li>Suporte gratuito</li>
                             <li>Segurança digital</li>
                             <li>Acesso ilimitado</li>
@@ -144,6 +118,55 @@
                             <li>Notas fiscais ilimitadas</li>
                             <li>Dicas de investimentos</li>
                             <li>Área do cliente</li>
+
+
+
+                        </ul>
+                        <a href="./cadastro/cadastro.html">
+                            <button type="button" class="w-100 btn btn-lg btn-dark">Contratar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-dark">
+                    <div id="rank" class="card-header py-3 text-bg-dark border-dark">
+
+                        <h4 class="my-0 fw-normal">Prata </h4>
+                        <h4> <img src="./img/prata.png" alt="" width="25px"> </h4>
+
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title text-dark">$25<small
+                                class="text-muted fw-light">/m</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4  text-black">
+                            <li>Suporte gratuito</li>
+                            <li>Segurança digital</li>
+                            <li>Acesso ilimitado</li>
+                            <li>Emissão de boletos</li>
+                            <li>3 Usuários</li>
+                            
+                        </ul>
+                        <a href="./cadastro/cadastro.html">
+                            <button type="button" class="w-100 btn btn-lg btn-dark">Contratar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-dark">
+                    <div id="rank" class="card-header py-3 text-bg-dark border-dark">
+                        <h4 class="my-0 fw-normal">Bronze</h4>
+                        <h4><img src="./img/bronze.png" alt="" width="25px"> </h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title text-dark">$0<small
+                                class="text-muted fw-light">/m</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4  text-black">
+                            <li>Suporte gratuito</li>
+                            <li>Segurança digital</li>
+                            <li>Acesso ilimitado</li>
+                            
                         </ul>
                         <a href="./cadastro/cadastro.html">
                             <button type="button" class="w-100 btn btn-lg btn-dark">Contratar</button>
