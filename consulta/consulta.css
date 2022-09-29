@@ -34,37 +34,6 @@ body {
 
 }
 
-.descricao {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.descricao > h1 {
-    width: 50%;
-    margin: 50px 0 5px 0;
-}
-
-.descricao > p {
-    width: 50%;
-}
-
-.descricao > img {
-    width: 20%;
-    margin-bottom: 50px;
-}
-
-.mb-4 > a > img {
-    width: 20px;
-    height: 20px;
-}
-
-footer img:hover {
-    box-shadow: 8px 2px 8px rgba(82, 82, 82, 0.4);
-    border-radius: 100%;
-}
-
 .cadastro {
     display: flex;
     flex-direction: column;
@@ -82,41 +51,12 @@ footer img:hover {
     margin: 20px;
 }
 
-.cadastro input {
-    border: 1px solid black;
-    justify-content: center;
+.mb-4 > a > img {
+    width: 20px;
+    height: 20px;
 }
 
-.inputbox {
-    display: flex;
-    flex-direction: column-reverse;
-
-}
-
-.botao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-input {
-    border-radius: 5px;
-    border: none;
-}
-
-#btn {
-    width: 20%;
-    margin-top: 20px;
-    border-radius: 10px;
-    background: rgba(82, 82, 82, 0.849);
-    transition: 2s;
-    color: white;
-    border: none;
-}
-
-#btn:hover {
-    background-color: black;
-    transition: 2s;
-    border: none;
-
+footer img:hover {
+    box-shadow: 8px 2px 8px rgba(82, 82, 82, 0.4);
+    border-radius: 100%;
 }

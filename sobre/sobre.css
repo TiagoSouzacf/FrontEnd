@@ -23,7 +23,6 @@ body {
     background-color: #010101;
     border-radius: 50%;
     z-index: 1000;
-
 }
 
 #whatsapp{
@@ -31,21 +30,10 @@ body {
     width: 40px;
     right: 50px;
     bottom: 32px;
-
-}
-
-.mb-4 > a > img {
-    width: 20px;
-    height: 20px;
-}
-
-footer img:hover {
-    box-shadow: 8px 2px 8px rgba(82, 82, 82, 0.4);
-    border-radius: 100%;
 }
 
 #conteudo {
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,8 +64,20 @@ footer img:hover {
 
 .img {
     width: 130px;
+    border-radius: 50%;
 }
 
 .quadradin a {
     text-decoration: none;
+    text-align: center;
+}
+
+.mb-4 > a > img {
+    width: 20px;
+    height: 20px;
+}
+
+footer img:hover {
+    box-shadow: 8px 2px 8px rgba(82, 82, 82, 0.4);
+    border-radius: 100%;
 }

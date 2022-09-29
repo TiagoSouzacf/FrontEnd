@@ -14,6 +14,12 @@ body {
     background: linear-gradient(white, black);
 }
 
+.dark {
+    background-color: black;
+    color: white;
+    transition: 3s;
+}
+
 #position{
     position: fixed;
     z-index: 1000;
@@ -67,63 +73,15 @@ body {
     height: 20px;
 }
 
+#precos {
+   margin: 0 10%;  
+} 
+
+footer {
+    background-color: #f1f1f1;
+}
+
 footer img:hover {
     box-shadow: 8px 2px 8px rgba(82, 82, 82, 0.4);
     border-radius: 100%;
-}
-
-.cadastro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10%;
-    width: 80%;
-    padding: 60px;
-    background-color: white;
-    border-radius: 20px;
-}
-
-.cadastro > h1 {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-}
-
-.cadastro input {
-    border: 1px solid black;
-    justify-content: center;
-}
-
-.inputbox {
-    display: flex;
-    flex-direction: column-reverse;
-
-}
-
-.botao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-input {
-    border-radius: 5px;
-    border: none;
-}
-
-#btn {
-    width: 20%;
-    margin-top: 20px;
-    border-radius: 10px;
-    background: rgba(82, 82, 82, 0.849);
-    transition: 2s;
-    color: white;
-    border: none;
-}
-
-#btn:hover {
-    background-color: black;
-    transition: 2s;
-    border: none;
-
 }

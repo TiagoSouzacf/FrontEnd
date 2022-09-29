@@ -1,6 +1,12 @@
 'use strict';
 
 const limparFormulario = (endereco) =>{
+    document.getElementById("inputNome").value = '';
+    document.getElementById("inputCpf").value = '';
+    document.getElementById("inputEmail").value = '';
+    document.getElementById("inputTelefone").value = '';
+    document.getElementById("cep").value = '';
+    document.getElementById("numero").value = '';
     document.getElementById('endereco').value = '';
     document.getElementById('bairro').value = '';
     document.getElementById('cidade').value = '';
@@ -21,7 +27,6 @@ const eNumero = (numero) => /^[0-9]+$/.test(numero);
 const cepValido = (cep) => cep.length == 8 && eNumero(cep); 
 
 const pesquisarCep = async() => {
-    limparFormulario();
     const cep = document.getElementById('cep').value;
     const url = `https://viacep.com.br/ws/${cep}/json/`;
     if (cepValido(cep)){
@@ -52,10 +57,10 @@ async function cadastrar ()  {
 
        main.innerHTML += `
         <div class="load">
-            <div class="clearfix">
-            <div class="spinner-border float-end" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
             </div>
         </div>
         `;
@@ -71,20 +76,19 @@ async function cadastrar ()  {
     var cidade = document.getElementById("cidade").value;
     var estado = document.getElementById("estado").value;
 
-
-let data =  {
-    "nome": nome,
-    "cpf": "123456",
-    "email": email,
-    "telefone": telefone,
-    "cep": cep,
-    "endereco": endereco,
-    "numeroendereco": numero,
-    "bairro": bairro,
-    "cidade": cidade,
-    "uf": estado,
-    "status": "Em análise",
-   };
+    let data =  {
+        "nome": nome,
+        "cpf": cpf,
+        "email": email,
+        "telefone": telefone,
+        "cep": cep,
+        "endereco": endereco,
+        "numeroendereco": numero,
+        "bairro": bairro,
+        "cidade": cidade,
+        "uf": estado,
+        "status": "Em análise",
+    };
 
    fetch("https://6333633c433198e79dc444a9.mockapi.io/cadastro", {
      method: "POST",
@@ -96,12 +100,14 @@ let data =  {
      .then((response) => response.json())
      .then((data) => {
        console.log("Success:", data);
+       localStorage.setItem("cpf", JSON.stringify(cpf))
        main.remove(); 
-       alert("Cadastro realizado com sucesso :)");
+       limparFormulario()
+       alert("Cadastro realizado com sucesso, você será redirecionado para consultar seu cadastro :)");
+       window.location.href = "../consulta/consulta.html";
      })
      .catch((error) => {
         alert("Erro ao cadastrar usuário :(");
      });
 
-    }
-    
+ }
