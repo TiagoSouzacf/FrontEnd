@@ -60,3 +60,14 @@ footer img:hover {
     box-shadow: 8px 2px 8px rgba(82, 82, 82, 0.4);
     border-radius: 100%;
 }
+
+@media screen and (max-width: 1100px) {
+    .cadastro input  {
+      width: 50vw;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column; 
+    }
+  }

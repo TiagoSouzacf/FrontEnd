@@ -62,9 +62,13 @@ footer img:hover {
     border-radius: 100%;
 }
 
+@media screen and (max-width: 1100px) {
+    .cadastro input  {
+      width: 50vw;
+    }
 
-@media (max-width: 1200px) {
-    .body {
-      background: blue;
+    form {
+      display: flex;
+      flex-direction: column; 
     }
   }
