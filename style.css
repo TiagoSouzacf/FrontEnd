@@ -11,13 +11,7 @@ body {
     height: 100%;
     color: white;
     background-color: rgba(0, 0, 0, 0.9);
-    background: linear-gradient(white, black);
-}
-
-.dark {
-    background-color: black;
-    color: white;
-    transition: 3s;
+    background: linear-gradient(black, #ff4d7b 70%, black );
 }
 
 .wpp-link{
